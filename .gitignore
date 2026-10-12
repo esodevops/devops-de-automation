@@ -1,0 +1,53 @@
+# Python virtual environments and bytecode
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Test, coverage, and lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Terraform local data, state, and saved plans
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# Keep .terraform.lock.hcl versioned for reproducible provider versions.
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+
+# Runtime logs
+*.log
+
+# Local Terraform backend configuration and generated deployment artifacts
+*.tfbackend
+!*.tfbackend.example
+tfplan
+terraform_outputs.json

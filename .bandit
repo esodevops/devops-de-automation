@@ -1,0 +1,3 @@
+# Randomness is used only to generate synthetic observations, not secrets.
+exclude_dirs: ['tests', 'venv', '.venv', '.terraform']
+skips: ['B311']
