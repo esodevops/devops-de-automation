@@ -1,0 +1,6 @@
+# Provision this state bucket separately, with versioning and public access blocked.
+bucket       = "replace-with-your-state-bucket"
+key          = "temperature-analysis/terraform.tfstate"
+region       = "eu-north-1"
+encrypt      = true
+use_lockfile = true

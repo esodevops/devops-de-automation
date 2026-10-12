@@ -1,0 +1,5 @@
+aws_region          = "eu-north-1"
+project_name        = "dml-temperature-analysis"
+use_existing_bucket = false
+force_destroy       = false
+# existing_bucket_name = "your-existing-bucket"
