@@ -1,0 +1,5 @@
+# The generator uses only the Python standard library.
+# Development and CI checks:
+pytest==8.3.5
+pytest-cov==4.1.0
+bandit==1.9.4
