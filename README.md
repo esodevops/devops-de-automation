@@ -54,6 +54,14 @@ Terraform provisions the infrastructure and uploads the CSV. The crawler discove
 
 The AWS provider constraint is `~> 5.0`. Keep `terraform/.terraform.lock.hcl` in version control so provider selections are reproducible.
 
+CI initializes providers with `-lockfile=readonly`. When updating provider selections, record verified checksums for both the Linux runner and Apple Silicon development machines before committing the lock file:
+
+```bash
+terraform -chdir=terraform providers lock -platform=linux_amd64 -platform=darwin_arm64
+```
+
+This prevents CI from installing a provider whose extracted-package checksum is absent from the committed lock file. See [HashiCorp's cross-platform locking guidance](https://developer.hashicorp.com/terraform/cli/commands/providers/lock).
+
 ## Local setup
 
 Run these commands from the repository root:
